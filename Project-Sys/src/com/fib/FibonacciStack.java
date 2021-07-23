@@ -12,10 +12,6 @@ public class FibonacciStack {
 	}
 	public int fibonacci(int fib) {
 		int fibo=0;
-		Stack<Integer> temp=new Stack();
-		temp.push(0);
-		temp.push(1);
-		
 		stack.push(0);
 		stack.push(1);
 		
@@ -23,11 +19,11 @@ public class FibonacciStack {
 //		System.out.println(stack.peek());
 		while(fib!=counter) {
 //			stack.push(stack.peek());
-			int top=temp.pop();
-			int prev=temp.pop();
+			int top=stack.pop();
+			int prev=stack.pop();
 			System.out.print(prev+ " ");
-			temp.push(top);
-			temp.push(top+prev);
+			stack.push(top);
+			stack.push(top+prev);
 			
 			stack.push(top);
 			stack.push(top+prev);
